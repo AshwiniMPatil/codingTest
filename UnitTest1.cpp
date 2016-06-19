@@ -235,10 +235,9 @@ namespace UnitTest_application
 			int actualRes  = obj.readInputFile(fileName, myPair);
 			Assert::AreEqual(expectedRes , actualRes);
 			
-			 ::iterator
 			std::vector<std::pair<int, string> > myExpectedRes;
 			fileName = "c:\\projects\\codingtest\\ExpectedRes.txt";
-			int actualRes  = obj.readInputFile(fileName, myExpectedRes);
+			actualRes  = obj.readInputFile(fileName, myExpectedRes);
 			std::vector<std::pair<int, string> >::iterator iterExpected = myExpectedRes.begin();
 			
 			for(;iter!=myPair.end() && iterExpected != myExpectedRes.end(); ++iter,++iterExpected)
