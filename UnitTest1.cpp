@@ -222,5 +222,21 @@ namespace UnitTest_application
 			Assert::AreEqual(expectedRes , actualRes);
 		};
 		
+		//UnitTesting for sorting application run after build
+			//Test Cases of readInputFile
+		[TestMethod]
+		void readInputFile_sortSuccess()
+		{
+			CTransMaxTestSolution obj;
+			int  expectedRes = 0;
+			std::vector<std::pair<int, string> > myPair;
+			std::string fileName = "c:\\projects\\codingtest\\names-graded.txt";
+			
+			int actualRes  = obj.readInputFile(fileName, myPair);
+			
+			Assert::AreEqual(expectedRes , actualRes);
+			Assert::AreEqual(myPair , myPair);
+		};
+		
 	};
 }
