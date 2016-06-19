@@ -230,15 +230,16 @@ namespace UnitTest_application
 			CTransMaxTestSolution obj;
 			int  expectedRes = 0;
 			std::vector<std::pair<int, string> > myPair;
-			std::vector<std::pair<int, string> > iterator ::iter iter = myPair.begin();
+			std::vector<std::pair<int, string> >::iterator iter  = myPair.begin();
 			std::string fileName = "c:\\projects\\codingtest\\names-graded.txt";
 			int actualRes  = obj.readInputFile(fileName, myPair);
 			Assert::AreEqual(expectedRes , actualRes);
 			
+			 ::iterator
 			std::vector<std::pair<int, string> > myExpectedRes;
 			fileName = "c:\\projects\\codingtest\\ExpectedRes.txt";
 			int actualRes  = obj.readInputFile(fileName, myExpectedRes);
-			std::vector<std::pair<int, string> > iterator ::iter iterExpected = myExpectedRes.begin();
+			std::vector<std::pair<int, string> >::iterator iterExpected = myExpectedRes.begin();
 			
 			for(;iter!=myPair.end() && iterExpected != myExpectedRes.end(); ++iter,++iterExpected)
 			{
